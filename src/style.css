@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    background-color: #060606;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.left-anim,
+.right-anim {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-image: url(./assets/img/anarchism.png);
+    background-repeat-x: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 50px;
+    height: 100%;
+}
+
+.left-anim {
+    left: 15px;
+}
+
+.right-anim {
+    right: 15px;
+}
+
+.content {
+    list-style: none;
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.content img {
+    width: clamp(200px, 80vw, 800px);
+    margin: 0 auto 30px;
+
+}
+
+.content__list {
+    padding-left: 0;
+}
+
+.content__list>li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content__song {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.content__like {
+    font-size: 25px;
+    background-color: transparent;
+    background: linear-gradient(180deg, #FBCE3E 0%, #EB8436 100%);
+    border: 3px solid #ab2a06;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.content__like svg {
+    width: 30px;
+    height: 30px;
+}
+
+.content__list>li path {
+    fill: #060606;
+    transition: .2s;
+}
+
+.content__like:hover path {
+    fill: #ab2a06;
+}
+
+.content__list>li span:last-child {
+    flex-basis: 40px;
+    text-align: right;
+}
+
+@media (max-width: 1100px) {
+
+    .left-anim,
+    .right-anim {
+        display: none;
+    }
+}
